@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 @Client.on_message(filters.command('start'))
 async def start(bot, message):
     """Start command handler"""
-    buttons = [[
+    buttons = [[InlineKeyboardButton(text="CREATOR",url="https://t.me/Anonymoushacker9")
               ]]
 
     reply_markup = InlineKeyboardMarkup(buttons)
