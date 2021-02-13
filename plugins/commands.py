@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 @Client.on_message(filters.command('start'))
 async def start(bot, message):
     """Start command handler"""
-    buttons = [[InlineKeyboardButton(text="CREATOR",url="https://t.me/Anonymoushacker9")
+    buttons = [[InlineKeyboardButton(text="CREATOR",url="https://t.me/Power_of_telegramx")
               ]]
 
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -44,7 +44,7 @@ async def channel_info(bot, message):
 @Client.on_message(filters.command('total') & filters.user(ADMINS))
 async def total(bot, message):
     """Show total files in database"""
-    msg = await message.reply("Processing...⏳", quote=True)
+    msg = await message.reply("Processing...⏳.....", quote=True)
     try:
         total = await Media.count_documents()
         await msg.edit(f' Search: {total}')
